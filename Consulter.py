@@ -38,6 +38,12 @@ def makeRanking(pTestDoc):
     for doc in TRAIN:
         ranking.append(SimDoc(doc, calcWeight(doc, pTestDoc)))
     ranking.sort(key=lambda simdoc: simdoc.sim)
+
+    print("\n* Doc TEST: ", pTestDoc.id, " \tClase: ", pTestDoc.classDoc, "*\n")
+    for i in range(10):
+        print("DocID: ", ranking[i].document.id, "  \tClase: ", ranking[i].document.classDoc, "  \tSim: ", ranking[i].sim)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
     return ranking[0:10]
 
 

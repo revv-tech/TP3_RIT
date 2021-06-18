@@ -3,6 +3,7 @@ from Consulter import *
 
 def main():
     initializer()
+    print("Escalafon de cada documento:")
     consult()
     fillEvaluation()
     fillMetrics()
